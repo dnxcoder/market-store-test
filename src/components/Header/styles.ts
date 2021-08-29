@@ -36,7 +36,7 @@ ul {
             }
         }
 
-       :nth-child(3){
+       :nth-child(2){
             height: 95%;
             display: flex;
             align-items: center;
@@ -78,45 +78,6 @@ ul {
             cursor: pointer;
         }
     }
-
-
-    .sort-menu{
-        position: relative;
-
-        .sort-menu-list{
-            display: none;
-            background-color: ${colors.dark_black};
-            width: 15rem;
-            border: 1px solid ${colors.red};
-            border-radius: 1rem;
-
-            .sort-menu-item{
-                font-size: 1rem;
-                text-align: center;
-            }
-        }
-
-        :hover{
-
-            .sort-menu-list{
-               
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 0.2rem;
-                padding: 1rem 0.5rem;
-                transform: translateX(-50%);
-                height: auto;
-                left: 50%;
-                top: 100%;
-                flex-direction: column;
-                position: absolute;
-                z-index: 20;
-               
-            }
-        }
-    }
-
     
 }
 `;

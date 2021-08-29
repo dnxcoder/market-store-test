@@ -13,9 +13,16 @@ margin-top: 2rem;
 gap: 0rem 3rem;
 
 div{
+
+    input{
+
+        color: ${colors.red};
+        background-color: ${colors.red};
+    }
     
     label{
         padding-left: 0.5rem;
+        color: ${colors.red};
        
     }
 

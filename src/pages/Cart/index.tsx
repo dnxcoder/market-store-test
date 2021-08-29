@@ -5,6 +5,7 @@ import { Screen, Content } from "./styles";
 import { useState } from 'react';
 import { realsConverter } from "../../utils/realsConverter";
 import { FiTrash2 } from "react-icons/fi";
+import { Footer } from "../../components/Footer";
 
 
 interface productProps {
@@ -142,12 +143,13 @@ export function Cart() {
                                 <span>{realsConverter(cartTotals?.shipping || 0)}</span>
                             </li>
                             <li>
-                                <h3>Total pedido</h3>
+                                <h3>Total do pedido</h3>
                                 <span>{realsConverter(cartTotals?.total || 0)}</span>
                             </li>
                         </ul>
                     </section>
                 </main>
+                <Footer />
             </Content>
         </Screen>
     )

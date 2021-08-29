@@ -39,21 +39,21 @@ export function Sort() {
         <StyledSort>
             <div>
                 <input type="radio" id="html" name="sort" value="price"
-                    checked={radioCP.radioValue === 'price' ? true : false}
+                    checked={radioState === 'price' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Preço</label>
             </div>
             <div>
                 <input type="radio" id="html" name="sort" value="score"
-                    checked={radioCP.radioValue === 'score' ? true : false}
+                    checked={radioState === 'score' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Popularidade</label>
             </div>
             <div>
                 <input type="radio" id="html" name="sort" value="name"
-                    checked={radioCP.radioValue === 'name' ? true : false}
+                    checked={radioState === 'name' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Ordem alfabética</label>

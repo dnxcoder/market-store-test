@@ -9,6 +9,7 @@ flex-direction: column;
 height: 100%;
 width: 100%;
 justify-content: center;
+padding-bottom: 3rem ;
 
 
 align-items: center;

@@ -23,14 +23,7 @@ export function Header() {
                             </button>
                         </Link>
                     </li>
-                    <li className="sort-menu">
-                        <FiList />
-                        <ul className="sort-menu-list">
-                            <li className="sort-menu-item">Organizar por preço</li>
-                            <li className="sort-menu-item">Organizar por popularidade</li>
-                            <li className="sort-menu-item">Organizar por ordem alfabética</li>
-                        </ul>
-                    </li>
+                 
                     <li>
                         <Link to="/cart" className="link">
                             <button type="button" >

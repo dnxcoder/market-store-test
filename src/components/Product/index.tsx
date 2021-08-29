@@ -62,7 +62,7 @@ export function Product({ id, name, price, score, image }: productProps) {
             <footer>
                 <ul>
                     <li>{name}</li>
-                    <li>Pontuação {score}</li>
+                    <li>{score} pontos</li>
                     <li>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</li>
                     <li>
                         <button type="button" onClick={() => { handleToCart({ id, name, price, score, image }) }}>

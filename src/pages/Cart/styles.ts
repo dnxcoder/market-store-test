@@ -61,6 +61,7 @@ background-color: ${colors.white};
                   font-size: 1.2rem;
                   display: flex;
                   align-items: center;
+                  color: ${colors.dark_light};
 
                   div{
                       position: relative;
@@ -88,6 +89,7 @@ background-color: ${colors.white};
                 font-weight: 600;
                 align-items: center;
                 justify-content: flex-end;
+                color: ${colors.red}
 
                 }
             }
@@ -111,8 +113,9 @@ background-color: ${colors.white};
                     font-family: ${fonts.poppins};
                     font-size: 1.2rem;
                     font-weight: 700;
-                    border-bottom: 1px solid ;
+                    border-bottom: 1px solid #DDD;
                     padding: 0.7rem 0rem;
+                    color: ${colors.red};
                 }
 
                 :nth-child(2){
@@ -121,7 +124,7 @@ background-color: ${colors.white};
                     display: flex;
                     justify-content: space-between;
                     padding: 0.7rem 1.5rem 0.7rem 0;
-                    border-bottom: 1px solid;
+                    border-bottom: 1px solid #DDD;
                     h3{
                         font-size: 1rem;
                         font-weight: 200;
@@ -134,10 +137,11 @@ background-color: ${colors.white};
                     display: flex;
                     padding: 0.7rem 1.5rem 0.7rem 0;
                     justify-content: space-between;
-                    border-bottom: 1px solid;
+                    border-bottom: 1px solid #DDD;
                     h3{
                         font-size: 1rem;
                         font-weight: 200;
+                        
                     }
                 }
 
@@ -147,14 +151,16 @@ background-color: ${colors.white};
                     display: flex;
                     padding: 0.7rem 1.5rem 0.7rem 0;
                     justify-content: space-between;
-                    border-bottom: 1px solid;
+                    border-bottom: 1px solid #DDD;
                     h3{
                         font-size: 1rem;
                         font-weight: 600;
+                        color: ${colors.orange};
                     }
                     span{
                         font-size: 1.5rem;
                         font-weight: 700;
+                        color: ${colors.orange};
                     }
                 }
             }

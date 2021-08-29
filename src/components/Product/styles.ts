@@ -34,11 +34,17 @@ ul {
         :nth-child(1){
             font-size: 1.2rem;
             text-align: center;
+            font-weight: 700;
+            color: ${colors.red};
+            margin-bottom: 0.4rem;
+            margin-top: 0.8rem;
          }
 
         :nth-child(2){
             font-size: 1.2rem;
             text-align: center;
+            color: #555;
+            margin-bottom: 0.4rem;
          }
 
          :nth-child(3){
@@ -46,6 +52,7 @@ ul {
              text-align: center;
              font-weight: 900;
              font-size: 1.5rem;
+
          }
 
          :nth-child(4){
