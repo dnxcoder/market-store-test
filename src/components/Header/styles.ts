@@ -25,7 +25,16 @@ ul {
         padding: 0.2rem .9rem;
         border: 2px solid rgba(0,0,0,0);
 
-        
+        :nth-child(1){
+
+            button{
+                font-size: 2rem;
+                color: ${colors.white};
+                background-color: rgba(0,0,0,0);
+                border: 0;
+                cursor: pointer;
+            }
+        }
 
        :nth-child(3){
             height: 95%;
@@ -33,6 +42,19 @@ ul {
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+
+
+            .link{
+
+                height: 100%;
+
+                button{
+                cursor: pointer;
+                height: 95%;
+                border: 0;
+                background-color: rgba(0,0,0,0);
+                
+            }
 
             svg{
                 
@@ -42,6 +64,10 @@ ul {
             :hover{
                 border-radius: 10rem;
             }
+
+            }
+
+            
          }
 
         :hover {
@@ -52,5 +78,45 @@ ul {
             cursor: pointer;
         }
     }
+
+
+    .sort-menu{
+        position: relative;
+
+        .sort-menu-list{
+            display: none;
+            background-color: ${colors.dark_black};
+            width: 15rem;
+            border: 1px solid ${colors.red};
+            border-radius: 1rem;
+
+            .sort-menu-item{
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        :hover{
+
+            .sort-menu-list{
+               
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0.2rem;
+                padding: 1rem 0.5rem;
+                transform: translateX(-50%);
+                height: auto;
+                left: 50%;
+                top: 100%;
+                flex-direction: column;
+                position: absolute;
+                z-index: 20;
+               
+            }
+        }
+    }
+
+    
 }
 `;
