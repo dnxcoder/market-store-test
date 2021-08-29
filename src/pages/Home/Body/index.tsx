@@ -17,14 +17,8 @@ export function Body() {
     //Sort products
     useEffect(() => {
 
-        /*
-        if(radioCP.radioValue ==='Preço'){
-            sortProductsByPrice();
-        }else if(radioCP.radioValue === 'Popularidade'){
-            sortProductsByScore();
-        }
-        */
-        
+        console.log(radioCP)
+
         switch (radioCP.radioValue) {
             case 'price':
                 sortProductsByPrice();
@@ -40,7 +34,7 @@ export function Body() {
                 sortProductsByPrice();
                 break;
         }
-        
+
 
     }, [radioCP]);
 
@@ -50,8 +44,13 @@ export function Body() {
 
         sortedArrayByPrice.sort((a, b) => {
 
-            if (a.price > b.price) return 1;
-            if (a.price < b.price) return -1;
+            if (radioCP.reverse) {
+                if (a.price > b.price) return 1;
+                if (a.price < b.price) return -1;
+            } else {
+                if (a.price > b.price) return -1;
+                if (a.price < b.price) return 1;
+            }
 
             return 0;
         });
@@ -66,9 +65,13 @@ export function Body() {
 
         sortedArrayByScore.sort((a, b) => {
 
-            if (a.score > b.score) return -1;
-            if (a.score < b.score) return 1;
-
+            if (radioCP.reverse) {
+                if (a.score > b.score) return -1;
+                if (a.score < b.score) return 1;
+            } else {
+                if (a.score > b.score) return 1;
+                if (a.score < b.score) return -1;
+            }
             return 0;
         });
 
@@ -82,8 +85,13 @@ export function Body() {
 
         sortedArrayByName.sort((a, b) => {
 
-            if (a.name > b.name) return 1;
-            if (a.name < b.name) return -1;
+            if (radioCP.reverse) {
+                if (a.name > b.name) return 1;
+                if (a.name < b.name) return -1;
+            } else {
+                if (a.name > b.name) return -1;
+                if (a.name < b.name) return 1;
+            }
 
             return 0;
         });

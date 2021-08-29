@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../utils/colors";
 import { fonts } from "../../utils/fonts";
 
 export const StyledSort = styled.div`
@@ -16,6 +17,16 @@ div{
     label{
         padding-left: 0.5rem;
        
+    }
+
+    .sort-button{
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0;
+        background-color: ${colors.red};
+        border-radius: 0.4rem;
+        box-shadow: 0.3rem 0.3rem 0.4rem 0.1rem rgba(0,0,0,0.4);
+        cursor: pointer;
     }
 }
 

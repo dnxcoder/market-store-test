@@ -1,18 +1,20 @@
 import { MouseEvent, useState } from 'react';
 import { StyledSort } from './style';
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { BiSort } from "react-icons/bi";
 
 import * as RadioActions from '../../store/actions/radioCP';
+import { colors } from '../../utils/colors';
 
 export function Sort() {
 
     //Redux Hooks
     const dispatch = useDispatch();
-    const radioCP = useSelector((state:any) => state.radioCP);
+    const radioCP = useSelector((state: any) => state.radioCP);
 
 
-    const [radioState, setRadioState] = useState('Preço');
-    
+    const [radioState, setRadioState] = useState('price');
+
 
     function handleRadioButtonSelect(e: MouseEvent) {
 
@@ -23,6 +25,13 @@ export function Sort() {
         dispatch(RadioActions.changeRadioValue(element.value));
 
 
+    }
+
+    async function handleToggleReverse(e: MouseEvent) {
+
+         dispatch(RadioActions.changeRadioValue(radioCP.radioValue, !radioCP.reverse));
+
+        
     }
 
 
@@ -48,6 +57,13 @@ export function Sort() {
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Ordem alfabética</label>
+            </div>
+            <div>
+                <button className="sort-button"
+                    onClick={handleToggleReverse}
+                >
+                    <BiSort size={24} color={colors.white} />
+                </button>
             </div>
         </StyledSort>
     )
