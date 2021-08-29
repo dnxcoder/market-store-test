@@ -29,22 +29,22 @@ export function Sort() {
     return (
         <StyledSort>
             <div>
-                <input type="radio" id="html" name="sort" value="Preço"
-                    checked={radioCP.radioValue === 'Preço' ? true : false}
+                <input type="radio" id="html" name="sort" value="price"
+                    checked={radioCP.radioValue === 'price' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Preço</label>
             </div>
             <div>
-                <input type="radio" id="html" name="sort" value="Popularidade"
-                    checked={radioCP.radioValue === 'Popularidade' ? true : false}
+                <input type="radio" id="html" name="sort" value="score"
+                    checked={radioCP.radioValue === 'score' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Popularidade</label>
             </div>
             <div>
-                <input type="radio" id="html" name="sort" value="Ordem alfabética"
-                    checked={radioCP.radioValue === 'Ordem alfabética' ? true : false}
+                <input type="radio" id="html" name="sort" value="name"
+                    checked={radioCP.radioValue === 'name' ? true : false}
                     onClick={handleRadioButtonSelect}
                 />
                 <label>Ordem alfabética</label>
