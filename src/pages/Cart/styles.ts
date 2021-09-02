@@ -13,6 +13,7 @@ export const Content = styled.div`
 width: 1024px;
 margin: auto;
 background-color: ${colors.white};
+overflow: hidden;
 
        .cart-header{
            
@@ -54,7 +55,7 @@ background-color: ${colors.white};
 
                 border-bottom: 1px solid #DDD;
                 padding: 1.2rem 3rem;
-
+              
 
                 :nth-child(1){
                   width: 50%;
@@ -94,6 +95,13 @@ background-color: ${colors.white};
                 }
             }
         }
+       }
+
+       .item-product{
+        
+        overflow: hidden;
+        transition: 1s linear;
+        height: 15rem;
        }
 
        .prices-section{
@@ -171,6 +179,10 @@ background-color: ${colors.white};
        .animate-deleted-product{
         
        
-        transform: translateX(-100%);
+        transform: translateX(-100%) ;
+        height: 0;
+        
+        
+        
        }
 `;

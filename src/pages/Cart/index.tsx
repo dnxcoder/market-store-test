@@ -72,26 +72,22 @@ export function Cart() {
 
     function handleRemoveProduct(indexRemove: number) {
 
+        const cloneArrayItems = [...cartState || []];
 
-        const arrayItemRemoved = cartState?.filter((item, index) => {
-
-            if (indexRemove != index) {
-                return item
-            }
-        });
+        cloneArrayItems.splice(indexRemove, 1);
 
         //Delete animation
         const chosenItemToRemove = productsContainer.current?.childNodes[indexRemove] as HTMLDivElement;
-        chosenItemToRemove.style.transition= '0.3s linear';
-        chosenItemToRemove.className = 'animate-deleted-product';
+        chosenItemToRemove.style.transition = '0.5s linear';
+        chosenItemToRemove.classList.add('animate-deleted-product');
 
         setTimeout(() => {
-            if (arrayItemRemoved) setCartStorage(arrayItemRemoved);
-            setCartState(arrayItemRemoved);
-            chosenItemToRemove.style.transition= '0s';
-            chosenItemToRemove.className = '';
+            setCartStorage(cloneArrayItems);
+            setCartState(cloneArrayItems);
+            chosenItemToRemove.style.transition = '0s';
+            chosenItemToRemove.classList.remove('animate-deleted-product');
 
-        }, 300);
+        }, 500);
 
     }
 
